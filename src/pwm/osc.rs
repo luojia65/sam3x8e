@@ -1,6 +1,25 @@
-#[doc = "Writer for register OSC"]
-pub type W = crate::W<u32, super::OSC>;
-#[doc = "Write proxy for field `OSCH0`"]
+#[doc = "Register `OSC` writer"]
+pub struct W(crate::W<OSC_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<OSC_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<OSC_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<OSC_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `OSCH0` writer - Output Selection Clear for PWMH output of the channel 0"]
 pub struct OSCH0_W<'a> {
     w: &'a mut W,
 }
@@ -18,11 +37,11 @@ impl<'a> OSCH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCH1`"]
+#[doc = "Field `OSCH1` writer - Output Selection Clear for PWMH output of the channel 1"]
 pub struct OSCH1_W<'a> {
     w: &'a mut W,
 }
@@ -40,11 +59,11 @@ impl<'a> OSCH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCH2`"]
+#[doc = "Field `OSCH2` writer - Output Selection Clear for PWMH output of the channel 2"]
 pub struct OSCH2_W<'a> {
     w: &'a mut W,
 }
@@ -62,11 +81,11 @@ impl<'a> OSCH2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCH3`"]
+#[doc = "Field `OSCH3` writer - Output Selection Clear for PWMH output of the channel 3"]
 pub struct OSCH3_W<'a> {
     w: &'a mut W,
 }
@@ -84,11 +103,11 @@ impl<'a> OSCH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCH4`"]
+#[doc = "Field `OSCH4` writer - Output Selection Clear for PWMH output of the channel 4"]
 pub struct OSCH4_W<'a> {
     w: &'a mut W,
 }
@@ -106,11 +125,11 @@ impl<'a> OSCH4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCH5`"]
+#[doc = "Field `OSCH5` writer - Output Selection Clear for PWMH output of the channel 5"]
 pub struct OSCH5_W<'a> {
     w: &'a mut W,
 }
@@ -128,11 +147,11 @@ impl<'a> OSCH5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCH6`"]
+#[doc = "Field `OSCH6` writer - Output Selection Clear for PWMH output of the channel 6"]
 pub struct OSCH6_W<'a> {
     w: &'a mut W,
 }
@@ -150,11 +169,11 @@ impl<'a> OSCH6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCH7`"]
+#[doc = "Field `OSCH7` writer - Output Selection Clear for PWMH output of the channel 7"]
 pub struct OSCH7_W<'a> {
     w: &'a mut W,
 }
@@ -172,11 +191,11 @@ impl<'a> OSCH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCL0`"]
+#[doc = "Field `OSCL0` writer - Output Selection Clear for PWML output of the channel 0"]
 pub struct OSCL0_W<'a> {
     w: &'a mut W,
 }
@@ -194,11 +213,11 @@ impl<'a> OSCL0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCL1`"]
+#[doc = "Field `OSCL1` writer - Output Selection Clear for PWML output of the channel 1"]
 pub struct OSCL1_W<'a> {
     w: &'a mut W,
 }
@@ -216,11 +235,11 @@ impl<'a> OSCL1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCL2`"]
+#[doc = "Field `OSCL2` writer - Output Selection Clear for PWML output of the channel 2"]
 pub struct OSCL2_W<'a> {
     w: &'a mut W,
 }
@@ -238,11 +257,11 @@ impl<'a> OSCL2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCL3`"]
+#[doc = "Field `OSCL3` writer - Output Selection Clear for PWML output of the channel 3"]
 pub struct OSCL3_W<'a> {
     w: &'a mut W,
 }
@@ -260,11 +279,11 @@ impl<'a> OSCL3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCL4`"]
+#[doc = "Field `OSCL4` writer - Output Selection Clear for PWML output of the channel 4"]
 pub struct OSCL4_W<'a> {
     w: &'a mut W,
 }
@@ -282,11 +301,11 @@ impl<'a> OSCL4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCL5`"]
+#[doc = "Field `OSCL5` writer - Output Selection Clear for PWML output of the channel 5"]
 pub struct OSCL5_W<'a> {
     w: &'a mut W,
 }
@@ -304,11 +323,11 @@ impl<'a> OSCL5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCL6`"]
+#[doc = "Field `OSCL6` writer - Output Selection Clear for PWML output of the channel 6"]
 pub struct OSCL6_W<'a> {
     w: &'a mut W,
 }
@@ -326,11 +345,11 @@ impl<'a> OSCL6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | (((value as u32) & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
         self.w
     }
 }
-#[doc = "Write proxy for field `OSCL7`"]
+#[doc = "Field `OSCL7` writer - Output Selection Clear for PWML output of the channel 7"]
 pub struct OSCL7_W<'a> {
     w: &'a mut W,
 }
@@ -348,7 +367,7 @@ impl<'a> OSCL7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | (((value as u32) & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
         self.w
     }
 }
@@ -433,4 +452,19 @@ impl W {
     pub fn oscl7(&mut self) -> OSCL7_W {
         OSCL7_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "PWM Output Selection Clear Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [osc](index.html) module"]
+pub struct OSC_SPEC;
+impl crate::RegisterSpec for OSC_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [osc::W](W) writer structure"]
+impl crate::Writable for OSC_SPEC {
+    type Writer = W;
 }

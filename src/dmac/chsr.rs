@@ -1,53 +1,354 @@
-#[doc = "Reader of register CHSR"]
-pub type R = crate::R<u32, super::CHSR>;
-#[doc = "Reader of field `ENA0`"]
-pub type ENA0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ENA1`"]
-pub type ENA1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ENA2`"]
-pub type ENA2_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ENA3`"]
-pub type ENA3_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ENA4`"]
-pub type ENA4_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ENA5`"]
-pub type ENA5_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SUSP0`"]
-pub type SUSP0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SUSP1`"]
-pub type SUSP1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SUSP2`"]
-pub type SUSP2_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SUSP3`"]
-pub type SUSP3_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SUSP4`"]
-pub type SUSP4_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SUSP5`"]
-pub type SUSP5_R = crate::R<bool, bool>;
-#[doc = "Reader of field `EMPT0`"]
-pub type EMPT0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `EMPT1`"]
-pub type EMPT1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `EMPT2`"]
-pub type EMPT2_R = crate::R<bool, bool>;
-#[doc = "Reader of field `EMPT3`"]
-pub type EMPT3_R = crate::R<bool, bool>;
-#[doc = "Reader of field `EMPT4`"]
-pub type EMPT4_R = crate::R<bool, bool>;
-#[doc = "Reader of field `EMPT5`"]
-pub type EMPT5_R = crate::R<bool, bool>;
-#[doc = "Reader of field `STAL0`"]
-pub type STAL0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `STAL1`"]
-pub type STAL1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `STAL2`"]
-pub type STAL2_R = crate::R<bool, bool>;
-#[doc = "Reader of field `STAL3`"]
-pub type STAL3_R = crate::R<bool, bool>;
-#[doc = "Reader of field `STAL4`"]
-pub type STAL4_R = crate::R<bool, bool>;
-#[doc = "Reader of field `STAL5`"]
-pub type STAL5_R = crate::R<bool, bool>;
+#[doc = "Register `CHSR` reader"]
+pub struct R(crate::R<CHSR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CHSR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<CHSR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<CHSR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `ENA0` reader - Enable \\[5:0\\]"]
+pub struct ENA0_R(crate::FieldReader<bool, bool>);
+impl ENA0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ENA0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ENA0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ENA1` reader - Enable \\[5:0\\]"]
+pub struct ENA1_R(crate::FieldReader<bool, bool>);
+impl ENA1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ENA1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ENA1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ENA2` reader - Enable \\[5:0\\]"]
+pub struct ENA2_R(crate::FieldReader<bool, bool>);
+impl ENA2_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ENA2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ENA2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ENA3` reader - Enable \\[5:0\\]"]
+pub struct ENA3_R(crate::FieldReader<bool, bool>);
+impl ENA3_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ENA3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ENA3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ENA4` reader - Enable \\[5:0\\]"]
+pub struct ENA4_R(crate::FieldReader<bool, bool>);
+impl ENA4_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ENA4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ENA4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ENA5` reader - Enable \\[5:0\\]"]
+pub struct ENA5_R(crate::FieldReader<bool, bool>);
+impl ENA5_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ENA5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ENA5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SUSP0` reader - Suspend \\[5:0\\]"]
+pub struct SUSP0_R(crate::FieldReader<bool, bool>);
+impl SUSP0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SUSP0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SUSP0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SUSP1` reader - Suspend \\[5:0\\]"]
+pub struct SUSP1_R(crate::FieldReader<bool, bool>);
+impl SUSP1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SUSP1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SUSP1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SUSP2` reader - Suspend \\[5:0\\]"]
+pub struct SUSP2_R(crate::FieldReader<bool, bool>);
+impl SUSP2_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SUSP2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SUSP2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SUSP3` reader - Suspend \\[5:0\\]"]
+pub struct SUSP3_R(crate::FieldReader<bool, bool>);
+impl SUSP3_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SUSP3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SUSP3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SUSP4` reader - Suspend \\[5:0\\]"]
+pub struct SUSP4_R(crate::FieldReader<bool, bool>);
+impl SUSP4_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SUSP4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SUSP4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SUSP5` reader - Suspend \\[5:0\\]"]
+pub struct SUSP5_R(crate::FieldReader<bool, bool>);
+impl SUSP5_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SUSP5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SUSP5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `EMPT0` reader - Empty \\[5:0\\]"]
+pub struct EMPT0_R(crate::FieldReader<bool, bool>);
+impl EMPT0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        EMPT0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for EMPT0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `EMPT1` reader - Empty \\[5:0\\]"]
+pub struct EMPT1_R(crate::FieldReader<bool, bool>);
+impl EMPT1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        EMPT1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for EMPT1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `EMPT2` reader - Empty \\[5:0\\]"]
+pub struct EMPT2_R(crate::FieldReader<bool, bool>);
+impl EMPT2_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        EMPT2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for EMPT2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `EMPT3` reader - Empty \\[5:0\\]"]
+pub struct EMPT3_R(crate::FieldReader<bool, bool>);
+impl EMPT3_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        EMPT3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for EMPT3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `EMPT4` reader - Empty \\[5:0\\]"]
+pub struct EMPT4_R(crate::FieldReader<bool, bool>);
+impl EMPT4_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        EMPT4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for EMPT4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `EMPT5` reader - Empty \\[5:0\\]"]
+pub struct EMPT5_R(crate::FieldReader<bool, bool>);
+impl EMPT5_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        EMPT5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for EMPT5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STAL0` reader - Stalled \\[5:0\\]"]
+pub struct STAL0_R(crate::FieldReader<bool, bool>);
+impl STAL0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STAL0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STAL0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STAL1` reader - Stalled \\[5:0\\]"]
+pub struct STAL1_R(crate::FieldReader<bool, bool>);
+impl STAL1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STAL1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STAL1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STAL2` reader - Stalled \\[5:0\\]"]
+pub struct STAL2_R(crate::FieldReader<bool, bool>);
+impl STAL2_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STAL2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STAL2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STAL3` reader - Stalled \\[5:0\\]"]
+pub struct STAL3_R(crate::FieldReader<bool, bool>);
+impl STAL3_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STAL3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STAL3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STAL4` reader - Stalled \\[5:0\\]"]
+pub struct STAL4_R(crate::FieldReader<bool, bool>);
+impl STAL4_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STAL4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STAL4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STAL5` reader - Stalled \\[5:0\\]"]
+pub struct STAL5_R(crate::FieldReader<bool, bool>);
+impl STAL5_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STAL5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STAL5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 0 - Enable \\[5:0\\]"]
     #[inline(always)]
@@ -168,5 +469,21 @@ impl R {
     #[inline(always)]
     pub fn stal5(&self) -> STAL5_R {
         STAL5_R::new(((self.bits >> 29) & 0x01) != 0)
+    }
+}
+#[doc = "DMAC Channel Handler Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chsr](index.html) module"]
+pub struct CHSR_SPEC;
+impl crate::RegisterSpec for CHSR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [chsr::R](R) reader structure"]
+impl crate::Readable for CHSR_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets CHSR to value 0x00ff_0000"]
+impl crate::Resettable for CHSR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x00ff_0000
     }
 }

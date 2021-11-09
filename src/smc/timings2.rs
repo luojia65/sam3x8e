@@ -1,18 +1,54 @@
-#[doc = "Reader of register TIMINGS2"]
-pub type R = crate::R<u32, super::TIMINGS2>;
-#[doc = "Writer for register TIMINGS2"]
-pub type W = crate::W<u32, super::TIMINGS2>;
-#[doc = "Register TIMINGS2 `reset()`'s with value 0"]
-impl crate::ResetValue for super::TIMINGS2 {
-    type Type = u32;
+#[doc = "Register `TIMINGS2` reader"]
+pub struct R(crate::R<TIMINGS2_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<TIMINGS2_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TCLR`"]
-pub type TCLR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TCLR`"]
+impl From<crate::R<TIMINGS2_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<TIMINGS2_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `TIMINGS2` writer"]
+pub struct W(crate::W<TIMINGS2_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<TIMINGS2_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<TIMINGS2_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<TIMINGS2_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `TCLR` reader - CLE to REN Low Delay"]
+pub struct TCLR_R(crate::FieldReader<u8, u8>);
+impl TCLR_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TCLR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TCLR_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TCLR` writer - CLE to REN Low Delay"]
 pub struct TCLR_W<'a> {
     w: &'a mut W,
 }
@@ -20,13 +56,25 @@ impl<'a> TCLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
+        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
         self.w
     }
 }
-#[doc = "Reader of field `TADL`"]
-pub type TADL_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TADL`"]
+#[doc = "Field `TADL` reader - ALE to Data Start"]
+pub struct TADL_R(crate::FieldReader<u8, u8>);
+impl TADL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TADL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TADL_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TADL` writer - ALE to Data Start"]
 pub struct TADL_W<'a> {
     w: &'a mut W,
 }
@@ -34,13 +82,25 @@ impl<'a> TADL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `TAR`"]
-pub type TAR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TAR`"]
+#[doc = "Field `TAR` reader - ALE to REN Low Delay"]
+pub struct TAR_R(crate::FieldReader<u8, u8>);
+impl TAR_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TAR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TAR_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TAR` writer - ALE to REN Low Delay"]
 pub struct TAR_W<'a> {
     w: &'a mut W,
 }
@@ -48,13 +108,25 @@ impl<'a> TAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
         self.w
     }
 }
-#[doc = "Reader of field `OCMS`"]
-pub type OCMS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OCMS`"]
+#[doc = "Field `OCMS` reader - Off Chip Memory Scrambling Enable"]
+pub struct OCMS_R(crate::FieldReader<bool, bool>);
+impl OCMS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        OCMS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for OCMS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `OCMS` writer - Off Chip Memory Scrambling Enable"]
 pub struct OCMS_W<'a> {
     w: &'a mut W,
 }
@@ -72,13 +144,25 @@ impl<'a> OCMS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Reader of field `TRR`"]
-pub type TRR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TRR`"]
+#[doc = "Field `TRR` reader - Ready to REN Low Delay"]
+pub struct TRR_R(crate::FieldReader<u8, u8>);
+impl TRR_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TRR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TRR_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TRR` writer - Ready to REN Low Delay"]
 pub struct TRR_W<'a> {
     w: &'a mut W,
 }
@@ -86,13 +170,25 @@ impl<'a> TRR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
         self.w
     }
 }
-#[doc = "Reader of field `TWB`"]
-pub type TWB_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TWB`"]
+#[doc = "Field `TWB` reader - WEN High to REN to Busy"]
+pub struct TWB_R(crate::FieldReader<u8, u8>);
+impl TWB_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TWB_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TWB_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TWB` writer - WEN High to REN to Busy"]
 pub struct TWB_W<'a> {
     w: &'a mut W,
 }
@@ -100,13 +196,25 @@ impl<'a> TWB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
+        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
         self.w
     }
 }
-#[doc = "Reader of field `RBNSEL`"]
-pub type RBNSEL_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `RBNSEL`"]
+#[doc = "Field `RBNSEL` reader - Ready/Busy Line Selection"]
+pub struct RBNSEL_R(crate::FieldReader<u8, u8>);
+impl RBNSEL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        RBNSEL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RBNSEL_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RBNSEL` writer - Ready/Busy Line Selection"]
 pub struct RBNSEL_W<'a> {
     w: &'a mut W,
 }
@@ -114,13 +222,25 @@ impl<'a> RBNSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 28)) | (((value as u32) & 0x07) << 28);
+        self.w.bits = (self.w.bits & !(0x07 << 28)) | ((value as u32 & 0x07) << 28);
         self.w
     }
 }
-#[doc = "Reader of field `NFSEL`"]
-pub type NFSEL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `NFSEL`"]
+#[doc = "Field `NFSEL` reader - NAND Flash Selection"]
+pub struct NFSEL_R(crate::FieldReader<bool, bool>);
+impl NFSEL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        NFSEL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for NFSEL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `NFSEL` writer - NAND Flash Selection"]
 pub struct NFSEL_W<'a> {
     w: &'a mut W,
 }
@@ -138,7 +258,7 @@ impl<'a> NFSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
         self.w
     }
 }
@@ -224,5 +344,31 @@ impl W {
     #[inline(always)]
     pub fn nfsel(&mut self) -> NFSEL_W {
         NFSEL_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "SMC Timings Register (CS_number = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timings2](index.html) module"]
+pub struct TIMINGS2_SPEC;
+impl crate::RegisterSpec for TIMINGS2_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [timings2::R](R) reader structure"]
+impl crate::Readable for TIMINGS2_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [timings2::W](W) writer structure"]
+impl crate::Writable for TIMINGS2_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets TIMINGS2 to value 0"]
+impl crate::Resettable for TIMINGS2_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

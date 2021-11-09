@@ -1,29 +1,186 @@
-#[doc = "Reader of register IMR"]
-pub type R = crate::R<u32, super::IMR>;
-#[doc = "Reader of field `MFD`"]
-pub type MFD_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RCOMP`"]
-pub type RCOMP_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RXUBR`"]
-pub type RXUBR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TXUBR`"]
-pub type TXUBR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TUND`"]
-pub type TUND_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RLE`"]
-pub type RLE_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TXERR`"]
-pub type TXERR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TCOMP`"]
-pub type TCOMP_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ROVR`"]
-pub type ROVR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `HRESP`"]
-pub type HRESP_R = crate::R<bool, bool>;
-#[doc = "Reader of field `PFR`"]
-pub type PFR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `PTZ`"]
-pub type PTZ_R = crate::R<bool, bool>;
+#[doc = "Register `IMR` reader"]
+pub struct R(crate::R<IMR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<IMR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<IMR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<IMR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `MFD` reader - Management Frame sent"]
+pub struct MFD_R(crate::FieldReader<bool, bool>);
+impl MFD_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MFD_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MFD_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RCOMP` reader - Receive Complete"]
+pub struct RCOMP_R(crate::FieldReader<bool, bool>);
+impl RCOMP_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RCOMP_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RCOMP_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RXUBR` reader - Receive Used Bit Read"]
+pub struct RXUBR_R(crate::FieldReader<bool, bool>);
+impl RXUBR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RXUBR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RXUBR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TXUBR` reader - Transmit Used Bit Read"]
+pub struct TXUBR_R(crate::FieldReader<bool, bool>);
+impl TXUBR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TXUBR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TXUBR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TUND` reader - Ethernet Transmit Buffer Underrun"]
+pub struct TUND_R(crate::FieldReader<bool, bool>);
+impl TUND_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TUND_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TUND_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RLE` reader - Retry Limit Exceeded"]
+pub struct RLE_R(crate::FieldReader<bool, bool>);
+impl RLE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RLE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RLE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TXERR` reader - "]
+pub struct TXERR_R(crate::FieldReader<bool, bool>);
+impl TXERR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TXERR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TXERR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TCOMP` reader - Transmit Complete"]
+pub struct TCOMP_R(crate::FieldReader<bool, bool>);
+impl TCOMP_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TCOMP_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TCOMP_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ROVR` reader - Receive Overrun"]
+pub struct ROVR_R(crate::FieldReader<bool, bool>);
+impl ROVR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ROVR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ROVR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HRESP` reader - Hresp not OK"]
+pub struct HRESP_R(crate::FieldReader<bool, bool>);
+impl HRESP_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HRESP_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for HRESP_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PFR` reader - Pause Frame Received"]
+pub struct PFR_R(crate::FieldReader<bool, bool>);
+impl PFR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PFR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PFR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PTZ` reader - Pause Time Zero"]
+pub struct PTZ_R(crate::FieldReader<bool, bool>);
+impl PTZ_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PTZ_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PTZ_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 0 - Management Frame sent"]
     #[inline(always)]
@@ -84,5 +241,21 @@ impl R {
     #[inline(always)]
     pub fn ptz(&self) -> PTZ_R {
         PTZ_R::new(((self.bits >> 13) & 0x01) != 0)
+    }
+}
+#[doc = "Interrupt Mask Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [imr](index.html) module"]
+pub struct IMR_SPEC;
+impl crate::RegisterSpec for IMR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [imr::R](R) reader structure"]
+impl crate::Readable for IMR_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets IMR to value 0x3fff"]
+impl crate::Resettable for IMR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x3fff
     }
 }

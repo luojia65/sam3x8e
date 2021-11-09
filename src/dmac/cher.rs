@@ -1,6 +1,25 @@
-#[doc = "Writer for register CHER"]
-pub type W = crate::W<u32, super::CHER>;
-#[doc = "Write proxy for field `ENA0`"]
+#[doc = "Register `CHER` writer"]
+pub struct W(crate::W<CHER_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CHER_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<CHER_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CHER_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `ENA0` writer - Enable \\[5:0\\]"]
 pub struct ENA0_W<'a> {
     w: &'a mut W,
 }
@@ -18,11 +37,11 @@ impl<'a> ENA0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `ENA1`"]
+#[doc = "Field `ENA1` writer - Enable \\[5:0\\]"]
 pub struct ENA1_W<'a> {
     w: &'a mut W,
 }
@@ -40,11 +59,11 @@ impl<'a> ENA1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `ENA2`"]
+#[doc = "Field `ENA2` writer - Enable \\[5:0\\]"]
 pub struct ENA2_W<'a> {
     w: &'a mut W,
 }
@@ -62,11 +81,11 @@ impl<'a> ENA2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Write proxy for field `ENA3`"]
+#[doc = "Field `ENA3` writer - Enable \\[5:0\\]"]
 pub struct ENA3_W<'a> {
     w: &'a mut W,
 }
@@ -84,11 +103,11 @@ impl<'a> ENA3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Write proxy for field `ENA4`"]
+#[doc = "Field `ENA4` writer - Enable \\[5:0\\]"]
 pub struct ENA4_W<'a> {
     w: &'a mut W,
 }
@@ -106,11 +125,11 @@ impl<'a> ENA4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `ENA5`"]
+#[doc = "Field `ENA5` writer - Enable \\[5:0\\]"]
 pub struct ENA5_W<'a> {
     w: &'a mut W,
 }
@@ -128,11 +147,11 @@ impl<'a> ENA5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `SUSP0`"]
+#[doc = "Field `SUSP0` writer - Suspend \\[5:0\\]"]
 pub struct SUSP0_W<'a> {
     w: &'a mut W,
 }
@@ -150,11 +169,11 @@ impl<'a> SUSP0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Write proxy for field `SUSP1`"]
+#[doc = "Field `SUSP1` writer - Suspend \\[5:0\\]"]
 pub struct SUSP1_W<'a> {
     w: &'a mut W,
 }
@@ -172,11 +191,11 @@ impl<'a> SUSP1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Write proxy for field `SUSP2`"]
+#[doc = "Field `SUSP2` writer - Suspend \\[5:0\\]"]
 pub struct SUSP2_W<'a> {
     w: &'a mut W,
 }
@@ -194,11 +213,11 @@ impl<'a> SUSP2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Write proxy for field `SUSP3`"]
+#[doc = "Field `SUSP3` writer - Suspend \\[5:0\\]"]
 pub struct SUSP3_W<'a> {
     w: &'a mut W,
 }
@@ -216,11 +235,11 @@ impl<'a> SUSP3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
-#[doc = "Write proxy for field `SUSP4`"]
+#[doc = "Field `SUSP4` writer - Suspend \\[5:0\\]"]
 pub struct SUSP4_W<'a> {
     w: &'a mut W,
 }
@@ -238,11 +257,11 @@ impl<'a> SUSP4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Write proxy for field `SUSP5`"]
+#[doc = "Field `SUSP5` writer - Suspend \\[5:0\\]"]
 pub struct SUSP5_W<'a> {
     w: &'a mut W,
 }
@@ -260,11 +279,11 @@ impl<'a> SUSP5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
-#[doc = "Write proxy for field `KEEP0`"]
+#[doc = "Field `KEEP0` writer - Keep on \\[5:0\\]"]
 pub struct KEEP0_W<'a> {
     w: &'a mut W,
 }
@@ -282,11 +301,11 @@ impl<'a> KEEP0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
         self.w
     }
 }
-#[doc = "Write proxy for field `KEEP1`"]
+#[doc = "Field `KEEP1` writer - Keep on \\[5:0\\]"]
 pub struct KEEP1_W<'a> {
     w: &'a mut W,
 }
@@ -304,11 +323,11 @@ impl<'a> KEEP1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
         self.w
     }
 }
-#[doc = "Write proxy for field `KEEP2`"]
+#[doc = "Field `KEEP2` writer - Keep on \\[5:0\\]"]
 pub struct KEEP2_W<'a> {
     w: &'a mut W,
 }
@@ -326,11 +345,11 @@ impl<'a> KEEP2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
         self.w
     }
 }
-#[doc = "Write proxy for field `KEEP3`"]
+#[doc = "Field `KEEP3` writer - Keep on \\[5:0\\]"]
 pub struct KEEP3_W<'a> {
     w: &'a mut W,
 }
@@ -348,11 +367,11 @@ impl<'a> KEEP3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
         self.w
     }
 }
-#[doc = "Write proxy for field `KEEP4`"]
+#[doc = "Field `KEEP4` writer - Keep on \\[5:0\\]"]
 pub struct KEEP4_W<'a> {
     w: &'a mut W,
 }
@@ -370,11 +389,11 @@ impl<'a> KEEP4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
         self.w
     }
 }
-#[doc = "Write proxy for field `KEEP5`"]
+#[doc = "Field `KEEP5` writer - Keep on \\[5:0\\]"]
 pub struct KEEP5_W<'a> {
     w: &'a mut W,
 }
@@ -392,7 +411,7 @@ impl<'a> KEEP5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
         self.w
     }
 }
@@ -487,4 +506,19 @@ impl W {
     pub fn keep5(&mut self) -> KEEP5_W {
         KEEP5_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "DMAC Channel Handler Enable Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cher](index.html) module"]
+pub struct CHER_SPEC;
+impl crate::RegisterSpec for CHER_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [cher::W](W) writer structure"]
+impl crate::Writable for CHER_SPEC {
+    type Writer = W;
 }

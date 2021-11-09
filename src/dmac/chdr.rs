@@ -1,6 +1,25 @@
-#[doc = "Writer for register CHDR"]
-pub type W = crate::W<u32, super::CHDR>;
-#[doc = "Write proxy for field `DIS0`"]
+#[doc = "Register `CHDR` writer"]
+pub struct W(crate::W<CHDR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CHDR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<CHDR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CHDR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `DIS0` writer - Disable \\[5:0\\]"]
 pub struct DIS0_W<'a> {
     w: &'a mut W,
 }
@@ -18,11 +37,11 @@ impl<'a> DIS0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `DIS1`"]
+#[doc = "Field `DIS1` writer - Disable \\[5:0\\]"]
 pub struct DIS1_W<'a> {
     w: &'a mut W,
 }
@@ -40,11 +59,11 @@ impl<'a> DIS1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `DIS2`"]
+#[doc = "Field `DIS2` writer - Disable \\[5:0\\]"]
 pub struct DIS2_W<'a> {
     w: &'a mut W,
 }
@@ -62,11 +81,11 @@ impl<'a> DIS2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Write proxy for field `DIS3`"]
+#[doc = "Field `DIS3` writer - Disable \\[5:0\\]"]
 pub struct DIS3_W<'a> {
     w: &'a mut W,
 }
@@ -84,11 +103,11 @@ impl<'a> DIS3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Write proxy for field `DIS4`"]
+#[doc = "Field `DIS4` writer - Disable \\[5:0\\]"]
 pub struct DIS4_W<'a> {
     w: &'a mut W,
 }
@@ -106,11 +125,11 @@ impl<'a> DIS4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `DIS5`"]
+#[doc = "Field `DIS5` writer - Disable \\[5:0\\]"]
 pub struct DIS5_W<'a> {
     w: &'a mut W,
 }
@@ -128,11 +147,11 @@ impl<'a> DIS5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `RES0`"]
+#[doc = "Field `RES0` writer - Resume \\[5:0\\]"]
 pub struct RES0_W<'a> {
     w: &'a mut W,
 }
@@ -150,11 +169,11 @@ impl<'a> RES0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Write proxy for field `RES1`"]
+#[doc = "Field `RES1` writer - Resume \\[5:0\\]"]
 pub struct RES1_W<'a> {
     w: &'a mut W,
 }
@@ -172,11 +191,11 @@ impl<'a> RES1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Write proxy for field `RES2`"]
+#[doc = "Field `RES2` writer - Resume \\[5:0\\]"]
 pub struct RES2_W<'a> {
     w: &'a mut W,
 }
@@ -194,11 +213,11 @@ impl<'a> RES2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Write proxy for field `RES3`"]
+#[doc = "Field `RES3` writer - Resume \\[5:0\\]"]
 pub struct RES3_W<'a> {
     w: &'a mut W,
 }
@@ -216,11 +235,11 @@ impl<'a> RES3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
-#[doc = "Write proxy for field `RES4`"]
+#[doc = "Field `RES4` writer - Resume \\[5:0\\]"]
 pub struct RES4_W<'a> {
     w: &'a mut W,
 }
@@ -238,11 +257,11 @@ impl<'a> RES4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Write proxy for field `RES5`"]
+#[doc = "Field `RES5` writer - Resume \\[5:0\\]"]
 pub struct RES5_W<'a> {
     w: &'a mut W,
 }
@@ -260,7 +279,7 @@ impl<'a> RES5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -325,4 +344,19 @@ impl W {
     pub fn res5(&mut self) -> RES5_W {
         RES5_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "DMAC Channel Handler Disable Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chdr](index.html) module"]
+pub struct CHDR_SPEC;
+impl crate::RegisterSpec for CHDR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [chdr::W](W) writer structure"]
+impl crate::Writable for CHDR_SPEC {
+    type Writer = W;
 }

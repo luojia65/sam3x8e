@@ -1,27 +1,172 @@
-#[doc = "Reader of register SR"]
-pub type R = crate::R<u32, super::SR>;
-#[doc = "Reader of field `IDTI`"]
-pub type IDTI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `VBUSTI`"]
-pub type VBUSTI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SRPI`"]
-pub type SRPI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `VBERRI`"]
-pub type VBERRI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `BCERRI`"]
-pub type BCERRI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ROLEEXI`"]
-pub type ROLEEXI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `HNPERRI`"]
-pub type HNPERRI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `STOI`"]
-pub type STOI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `VBUSRQ`"]
-pub type VBUSRQ_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ID`"]
-pub type ID_R = crate::R<bool, bool>;
-#[doc = "Reader of field `VBUS`"]
-pub type VBUS_R = crate::R<bool, bool>;
+#[doc = "Register `SR` reader"]
+pub struct R(crate::R<SR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<SR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<SR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<SR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `IDTI` reader - ID Transition Interrupt"]
+pub struct IDTI_R(crate::FieldReader<bool, bool>);
+impl IDTI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        IDTI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for IDTI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `VBUSTI` reader - VBus Transition Interrupt"]
+pub struct VBUSTI_R(crate::FieldReader<bool, bool>);
+impl VBUSTI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBUSTI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for VBUSTI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SRPI` reader - SRP Interrupt"]
+pub struct SRPI_R(crate::FieldReader<bool, bool>);
+impl SRPI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SRPI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SRPI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `VBERRI` reader - VBus Error Interrupt"]
+pub struct VBERRI_R(crate::FieldReader<bool, bool>);
+impl VBERRI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBERRI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for VBERRI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `BCERRI` reader - B-Connection Error Interrupt"]
+pub struct BCERRI_R(crate::FieldReader<bool, bool>);
+impl BCERRI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        BCERRI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BCERRI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ROLEEXI` reader - Role Exchange Interrupt"]
+pub struct ROLEEXI_R(crate::FieldReader<bool, bool>);
+impl ROLEEXI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ROLEEXI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ROLEEXI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HNPERRI` reader - HNP Error Interrupt"]
+pub struct HNPERRI_R(crate::FieldReader<bool, bool>);
+impl HNPERRI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HNPERRI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for HNPERRI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STOI` reader - Suspend Time-Out Interrupt"]
+pub struct STOI_R(crate::FieldReader<bool, bool>);
+impl STOI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STOI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STOI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `VBUSRQ` reader - VBus Request"]
+pub struct VBUSRQ_R(crate::FieldReader<bool, bool>);
+impl VBUSRQ_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBUSRQ_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for VBUSRQ_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ID` reader - UOTGID Pin State"]
+pub struct ID_R(crate::FieldReader<bool, bool>);
+impl ID_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ID_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ID_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `VBUS` reader - VBus Level"]
+pub struct VBUS_R(crate::FieldReader<bool, bool>);
+impl VBUS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBUS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for VBUS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 #[doc = "Speed Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
@@ -39,38 +184,59 @@ impl From<SPEED_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `SPEED`"]
-pub type SPEED_R = crate::R<u8, SPEED_A>;
+#[doc = "Field `SPEED` reader - Speed Status"]
+pub struct SPEED_R(crate::FieldReader<u8, SPEED_A>);
 impl SPEED_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        SPEED_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> crate::Variant<u8, SPEED_A> {
-        use crate::Variant::*;
+    pub fn variant(&self) -> Option<SPEED_A> {
         match self.bits {
-            0 => Val(SPEED_A::FULL_SPEED),
-            1 => Val(SPEED_A::HIGH_SPEED),
-            2 => Val(SPEED_A::LOW_SPEED),
-            i => Res(i),
+            0 => Some(SPEED_A::FULL_SPEED),
+            1 => Some(SPEED_A::HIGH_SPEED),
+            2 => Some(SPEED_A::LOW_SPEED),
+            _ => None,
         }
     }
     #[doc = "Checks if the value of the field is `FULL_SPEED`"]
     #[inline(always)]
     pub fn is_full_speed(&self) -> bool {
-        *self == SPEED_A::FULL_SPEED
+        **self == SPEED_A::FULL_SPEED
     }
     #[doc = "Checks if the value of the field is `HIGH_SPEED`"]
     #[inline(always)]
     pub fn is_high_speed(&self) -> bool {
-        *self == SPEED_A::HIGH_SPEED
+        **self == SPEED_A::HIGH_SPEED
     }
     #[doc = "Checks if the value of the field is `LOW_SPEED`"]
     #[inline(always)]
     pub fn is_low_speed(&self) -> bool {
-        *self == SPEED_A::LOW_SPEED
+        **self == SPEED_A::LOW_SPEED
     }
 }
-#[doc = "Reader of field `CLKUSABLE`"]
-pub type CLKUSABLE_R = crate::R<bool, bool>;
+impl core::ops::Deref for SPEED_R {
+    type Target = crate::FieldReader<u8, SPEED_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CLKUSABLE` reader - UTMI Clock Usable"]
+pub struct CLKUSABLE_R(crate::FieldReader<bool, bool>);
+impl CLKUSABLE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLKUSABLE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLKUSABLE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 0 - ID Transition Interrupt"]
     #[inline(always)]
@@ -136,5 +302,21 @@ impl R {
     #[inline(always)]
     pub fn clkusable(&self) -> CLKUSABLE_R {
         CLKUSABLE_R::new(((self.bits >> 14) & 0x01) != 0)
+    }
+}
+#[doc = "General Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sr](index.html) module"]
+pub struct SR_SPEC;
+impl crate::RegisterSpec for SR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [sr::R](R) reader structure"]
+impl crate::Readable for SR_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets SR to value 0x0400"]
+impl crate::Resettable for SR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x0400
     }
 }

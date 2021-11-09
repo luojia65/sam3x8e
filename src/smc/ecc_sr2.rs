@@ -1,53 +1,354 @@
-#[doc = "Reader of register ECC_SR2"]
-pub type R = crate::R<u32, super::ECC_SR2>;
-#[doc = "Reader of field `RECERR8`"]
-pub type RECERR8_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ECCERR8`"]
-pub type ECCERR8_R = crate::R<bool, bool>;
-#[doc = "Reader of field `MULERR8`"]
-pub type MULERR8_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RECERR9`"]
-pub type RECERR9_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ECCERR9`"]
-pub type ECCERR9_R = crate::R<bool, bool>;
-#[doc = "Reader of field `MULERR9`"]
-pub type MULERR9_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RECERR10`"]
-pub type RECERR10_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ECCERR10`"]
-pub type ECCERR10_R = crate::R<bool, bool>;
-#[doc = "Reader of field `MULERR10`"]
-pub type MULERR10_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RECERR11`"]
-pub type RECERR11_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ECCERR11`"]
-pub type ECCERR11_R = crate::R<bool, bool>;
-#[doc = "Reader of field `MULERR11`"]
-pub type MULERR11_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RECERR12`"]
-pub type RECERR12_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ECCERR12`"]
-pub type ECCERR12_R = crate::R<bool, bool>;
-#[doc = "Reader of field `MULERR12`"]
-pub type MULERR12_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RECERR13`"]
-pub type RECERR13_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ECCERR13`"]
-pub type ECCERR13_R = crate::R<bool, bool>;
-#[doc = "Reader of field `MULERR13`"]
-pub type MULERR13_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RECERR14`"]
-pub type RECERR14_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ECCERR14`"]
-pub type ECCERR14_R = crate::R<bool, bool>;
-#[doc = "Reader of field `MULERR14`"]
-pub type MULERR14_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RECERR15`"]
-pub type RECERR15_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ECCERR15`"]
-pub type ECCERR15_R = crate::R<bool, bool>;
-#[doc = "Reader of field `MULERR15`"]
-pub type MULERR15_R = crate::R<bool, bool>;
+#[doc = "Register `ECC_SR2` reader"]
+pub struct R(crate::R<ECC_SR2_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<ECC_SR2_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<ECC_SR2_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<ECC_SR2_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `RECERR8` reader - Recoverable Error in the page between the 2048th and the 2303rd bytes"]
+pub struct RECERR8_R(crate::FieldReader<bool, bool>);
+impl RECERR8_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RECERR8_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RECERR8_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ECCERR8` reader - ECC Error in the page between the 2048th and the 2303rd bytes"]
+pub struct ECCERR8_R(crate::FieldReader<bool, bool>);
+impl ECCERR8_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ECCERR8_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ECCERR8_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MULERR8` reader - Multiple Error in the page between the 2048th and the 2303rd bytes"]
+pub struct MULERR8_R(crate::FieldReader<bool, bool>);
+impl MULERR8_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MULERR8_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MULERR8_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RECERR9` reader - Recoverable Error in the page between the 2304th and the 2559th bytes"]
+pub struct RECERR9_R(crate::FieldReader<bool, bool>);
+impl RECERR9_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RECERR9_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RECERR9_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ECCERR9` reader - ECC Error in the page between the 2304th and the 2559th bytes"]
+pub struct ECCERR9_R(crate::FieldReader<bool, bool>);
+impl ECCERR9_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ECCERR9_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ECCERR9_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MULERR9` reader - Multiple Error in the page between the 2304th and the 2559th bytes"]
+pub struct MULERR9_R(crate::FieldReader<bool, bool>);
+impl MULERR9_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MULERR9_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MULERR9_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RECERR10` reader - Recoverable Error in the page between the 2560th and the 2815th bytes"]
+pub struct RECERR10_R(crate::FieldReader<bool, bool>);
+impl RECERR10_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RECERR10_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RECERR10_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ECCERR10` reader - ECC Error in the page between the 2560th and the 2815th bytes"]
+pub struct ECCERR10_R(crate::FieldReader<bool, bool>);
+impl ECCERR10_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ECCERR10_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ECCERR10_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MULERR10` reader - Multiple Error in the page between the 2560th and the 2815th bytes"]
+pub struct MULERR10_R(crate::FieldReader<bool, bool>);
+impl MULERR10_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MULERR10_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MULERR10_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RECERR11` reader - Recoverable Error in the page between the 2816th and the 3071st bytes"]
+pub struct RECERR11_R(crate::FieldReader<bool, bool>);
+impl RECERR11_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RECERR11_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RECERR11_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ECCERR11` reader - ECC Error in the page between the 2816th and the 3071st bytes"]
+pub struct ECCERR11_R(crate::FieldReader<bool, bool>);
+impl ECCERR11_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ECCERR11_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ECCERR11_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MULERR11` reader - Multiple Error in the page between the 2816th and the 3071st bytes"]
+pub struct MULERR11_R(crate::FieldReader<bool, bool>);
+impl MULERR11_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MULERR11_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MULERR11_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RECERR12` reader - Recoverable Error in the page between the 3072nd and the 3327th bytes"]
+pub struct RECERR12_R(crate::FieldReader<bool, bool>);
+impl RECERR12_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RECERR12_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RECERR12_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ECCERR12` reader - ECC Error in the page between the 3072nd and the 3327th bytes"]
+pub struct ECCERR12_R(crate::FieldReader<bool, bool>);
+impl ECCERR12_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ECCERR12_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ECCERR12_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MULERR12` reader - Multiple Error in the page between the 3072nd and the 3327th bytes"]
+pub struct MULERR12_R(crate::FieldReader<bool, bool>);
+impl MULERR12_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MULERR12_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MULERR12_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RECERR13` reader - Recoverable Error in the page between the 3328th and the 3583rd bytes"]
+pub struct RECERR13_R(crate::FieldReader<bool, bool>);
+impl RECERR13_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RECERR13_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RECERR13_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ECCERR13` reader - ECC Error in the page between the 3328th and the 3583rd bytes"]
+pub struct ECCERR13_R(crate::FieldReader<bool, bool>);
+impl ECCERR13_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ECCERR13_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ECCERR13_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MULERR13` reader - Multiple Error in the page between the 3328th and the 3583rd bytes"]
+pub struct MULERR13_R(crate::FieldReader<bool, bool>);
+impl MULERR13_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MULERR13_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MULERR13_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RECERR14` reader - Recoverable Error in the page between the 3584th and the 3839th bytes"]
+pub struct RECERR14_R(crate::FieldReader<bool, bool>);
+impl RECERR14_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RECERR14_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RECERR14_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ECCERR14` reader - ECC Error in the page between the 3584th and the 3839th bytes"]
+pub struct ECCERR14_R(crate::FieldReader<bool, bool>);
+impl ECCERR14_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ECCERR14_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ECCERR14_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MULERR14` reader - Multiple Error in the page between the 3584th and the 3839th bytes"]
+pub struct MULERR14_R(crate::FieldReader<bool, bool>);
+impl MULERR14_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MULERR14_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MULERR14_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RECERR15` reader - Recoverable Error in the page between the 3840th and the 4095th bytes"]
+pub struct RECERR15_R(crate::FieldReader<bool, bool>);
+impl RECERR15_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RECERR15_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RECERR15_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ECCERR15` reader - ECC Error in the page between the 3840th and the 4095th bytes"]
+pub struct ECCERR15_R(crate::FieldReader<bool, bool>);
+impl ECCERR15_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ECCERR15_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ECCERR15_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MULERR15` reader - Multiple Error in the page between the 3840th and the 4095th bytes"]
+pub struct MULERR15_R(crate::FieldReader<bool, bool>);
+impl MULERR15_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MULERR15_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MULERR15_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 0 - Recoverable Error in the page between the 2048th and the 2303rd bytes"]
     #[inline(always)]
@@ -168,5 +469,21 @@ impl R {
     #[inline(always)]
     pub fn mulerr15(&self) -> MULERR15_R {
         MULERR15_R::new(((self.bits >> 30) & 0x01) != 0)
+    }
+}
+#[doc = "SMC ECC status 2 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ecc_sr2](index.html) module"]
+pub struct ECC_SR2_SPEC;
+impl crate::RegisterSpec for ECC_SR2_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ecc_sr2::R](R) reader structure"]
+impl crate::Readable for ECC_SR2_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets ECC_SR2 to value 0"]
+impl crate::Resettable for ECC_SR2_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
