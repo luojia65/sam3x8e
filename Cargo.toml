@@ -2,8 +2,6 @@
 name = "sam3x8e"
 version = "0.1.1"
 authors = ["Raphael Theiler <peanut@esheep.ch>"]
-test = false
-bench = false
 edition = "2018"
 repository = "https://github.com/ammoniak/sam3x8e"
 license = "MIT/Apache-2.0"
@@ -13,15 +11,15 @@ description =  "Device support crate for sam3x8e devices"
 
 [lib]
 test = false
+bench = false
 
 [dependencies]
-bare-metal = "0.2.0"
-cortex-m = "0.5.8"
-vcell = "0.1.0"
+cortex-m = "0.7"
+vcell = "0.1.2"
 
 [dependencies.cortex-m-rt]
 optional = true
-version = "0.6.5"
+version = "0.6.13"
 
 [features]
 rt = ["cortex-m-rt/device"]
